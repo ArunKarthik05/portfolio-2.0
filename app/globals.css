@@ -1,20 +1,25 @@
 @font-face {
-  font-family: 'Ubuntu Bold';
-  src: url('/fonts/Ubuntu/Ubuntu-Bold.ttf') format('truetype');
+  font-family: 'Karla Bold';
+  src: url('../styles/fonts/Karla/Karla-Bold.ttf') format('woff2');
   font-weight: bold;
   font-style: normal;
 }
 @font-face {
-  font-family: 'Ubuntu Italic';
-  src: url('/styles/fonts/Ubuntu/Ubuntu-Italic.ttf') format('truetype');
+  font-family: 'Karla Italic';
+  src: url('../styles/fonts/Karla/Karla-Italic.ttf') format('woff2');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Karla XBoldItalic';
+  src: url('../styles/fonts/Karla/Karla-ExtraBoldItalic.ttf') format('woff2');
   font-weight: bold;
   font-style: normal;
 }
 
 html{
-  font-family: 'Ubuntu Bold';
-  background-color: black;
-  color: white;
+  font-family: 'Karla Bold';
+  background-color: white;
   h1,p{
     margin: 0;
     padding: 0;

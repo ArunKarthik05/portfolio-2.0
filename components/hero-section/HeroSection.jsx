@@ -1,15 +1,14 @@
 import React from 'react';
 import styles from "./hero-section.module.scss"
-import Dome from '../3d/canvas/react';
+import Spline from '@splinetool/react-spline';
 
 export const HeroSection = () => {
   return (
     <div className={styles.main}>
         <div className={styles.heroleft}>
-          <Dome/>
+          <Spline className={styles.spline} scene="https://prod.spline.design/JonUyXTjggwpvoCx/scene.splinecode" />
         </div>
         <div className={styles.heroRight}>
-          <p>ARUN KARTHIK</p>
           <div className={styles.mainText}>
             <h1>
               SHAPING DREAMS INTO <span>3D</span> REALITY <br/>

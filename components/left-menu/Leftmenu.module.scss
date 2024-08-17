@@ -1,0 +1,33 @@
+@import "../../styles/app.scss";
+@import "../../styles/flex.scss";
+@import "../../styles/variables.scss";
+
+.main{
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin: 1%;
+    padding: 2% 0;
+    width: 5vw;
+    background-color: rgb(0,50,11);
+    border-radius: 10rem;
+    height: 90vh;
+    @extend .flexCol !optional;
+    justify-content: space-between;
+    .image{
+        position: absolute;
+        top: 40%;
+        transform: rotate(105deg);
+    }
+    .top{
+        // border: 1px solid red;
+    }
+    .bottom{
+        height: 50%;
+        @extend .flexCol !optional;
+        justify-content: space-evenly;
+    }
+    svg{
+        cursor: pointer;
+    }
+}

@@ -1,0 +1,41 @@
+@import "../../styles/variables.scss";
+
+.main {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    border: 1px solid red;
+    border-radius: 5rem;
+    background-color: red;
+    // background-image: url("../../public/images/arun.png");
+    background-size:contain;
+    background-repeat: no-repeat;
+    background-position: right;
+    .text{
+        font-family: "Karla XBoldItalic";
+        // border:1px solid blue;
+        margin: 4rem 0 0 4rem;
+        .iam{
+            font-size: 100px;
+            color:whitesmoke;
+        }
+        .name{
+            font-size: 150px;
+            color:black;
+        }
+        .stack{
+            font-size: 100px;
+        }
+        color: white;
+    }
+    .quote{
+        font-size: 80px;
+        color: white;
+    }
+    .btnContainer{
+        position: absolute;
+        right: 10%;
+        bottom: 5%;
+    }
+  }
+  

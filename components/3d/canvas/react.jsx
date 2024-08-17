@@ -7,7 +7,7 @@ import { OrbitControls } from "@react-three/drei";
 export default function Dome() {
     return (
       <div style={{ width: '800px', height: '600px' }}>
-        <Canvas style={{ width: '100%', height: '100%' }}>
+        <Canvas style={{ width: '100%', height: '100%' ,border:"1px solid red"}}>
           <OrbitControls />
           <ambientLight intensity={0.5} />
           <directionalLight 

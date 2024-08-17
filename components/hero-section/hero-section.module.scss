@@ -3,40 +3,41 @@
 @import "../../styles/variables.scss";
 
 .main{
+    // border: 1px solid red;
     margin-top: 10%;
     @extend .flexRow !optional;
-    flex: 1;
-    // justify-content: space-between;
+    gap: 5vw;
    .heroleft{
-        width: 40%;
-        height: 100%;
-        // border: 1px solid green;
+        height: 80%;
+        border-radius: 5rem;
+        background-color: #D6FF82;
+        .spline{
+        }
    }
    .heroRight{
-    height: 100%;
-    width: 60%;
-    // border: 1px solid yellow;   
-        // width: 80%;
+        margin-right: 3rem;
+        padding: 1rem;
+        background: rgba(221, 47, 143, 0.903);
+        // background: linear-gradient(169deg, rgba(83,49,189,0.9178265056022409) 0%, rgba(148,9,237,1) 44%, rgba(184,9,178,1) 92%);
+        box-shadow: 2px 10px 30px rgba(255, 0, 166, 0.27);
+        height: fit-content;
+        border-radius: 5rem;
+        width: fit-content;
         @extend .flexCol !optional;
         align-items: center;
         justify-content: flex-start;
-        p{
-            color: $color-gray;
-            font-size: 32px;
-            text-align: left;
-        }
         .mainText{
+            font-family: 'Karla XBoldItalic';
             // border: 1px solid blue;
-            width: 60%;
             padding: 4rem 0;
             font-size: 48px;
             font-weight: normal;
-            color: rgb(235,89,57);
-            @extend .glowing-text !optional;
+            color: white;
             span{
-                color: $color-gray;
+                color: rgb(21, 255, 0);
             }
             text-align: center;
+            cursor: default;
         }
    }
    height: 80vh;
