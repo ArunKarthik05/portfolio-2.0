@@ -1,4 +1,5 @@
 import "./globals.css";
+import LenisScroll from "@/lenis/SmoothScroll";
 
 export const metadata = {
   title: "Arun Karthik - Web Developer",
@@ -8,7 +9,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <LenisScroll>{children}</LenisScroll>
+      </body>
     </html>
   );
 }

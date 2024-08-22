@@ -4,6 +4,8 @@ import { HeroSection } from "@/components/hero-section/HeroSection";
 import LeftMenu from "@/components/left-menu/LeftMenu";
 import Education from "@/components/education/Education";
 import About from "@/components/about-me/About";
+import AudioPlayer from "@/components/audio-player/AudioPlayer";
+import TechStack from "@/components/tech/Tech";
 
 export default function Home() {
   return (
@@ -23,6 +25,12 @@ export default function Home() {
       <section>
         <Education/>
       </section>
+      <section>
+        <TechStack/>
+      </section>
+
+
+      <AudioPlayer src="/music/bgmusic.mp3"/>
     </div>
   );
 }

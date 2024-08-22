@@ -1,0 +1,23 @@
+@import "../../styles/variables.scss";
+@import "../../styles/flex.scss";
+
+.main{
+    position: fixed;
+    bottom: 10%;
+    right: 0;
+    transform: rotate(90deg);
+    @extend .flexRow !optional;
+    gap:1rem;
+    font-size: 22px;
+    p{
+        color: rgb(85, 85, 85);
+        font-family: 'Avant Garde-2';
+    }
+    .playBtn{
+        border: none;
+        background-color: transparent;
+        color:$color-gray;
+        font-size: 22px;
+        font-family: 'Avant Garde-2';
+    }
+}

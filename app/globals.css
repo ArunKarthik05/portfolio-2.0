@@ -5,8 +5,8 @@
   font-style: normal;
 }
 @font-face {
-  font-family: 'Karla Italic';
-  src: url('../styles/fonts/Karla/Karla-Italic.ttf') format('woff2');
+  font-family: 'Karla LightItalic';
+  src: url('../styles/fonts/Karla/Karla-LightItalic.ttf') format('woff2');
   font-weight: bold;
   font-style: normal;
 }
@@ -16,11 +16,24 @@
   font-weight: bold;
   font-style: normal;
 }
+@font-face {
+  font-family: 'Avant Garde';
+  src: url('../styles/fonts/AvantGarde/AVGARDD_2.TTF') format('woff2');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Avant Garde-2';
+  src: url('../styles/fonts/AvantGarde/AVGARDDO_2.TTF') format('woff2');
+  font-weight: bold;
+  font-style: normal;
+}
 
 html{
-  font-family: 'Karla Bold';
-  background-color: white;
-  h1,p{
+  font-family: 'Avant Garde';
+  background-color: #0D0D0D;
+  color: #B7AA98;
+  h1,h2,p{
     margin: 0;
     padding: 0;
   }

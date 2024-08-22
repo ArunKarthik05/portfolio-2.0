@@ -1,3 +1,18 @@
+@import "./variables.scss";
+
+.heading{
+    font-size: 100px;
+}
 .container{
     border-radius: 1rem;
+}
+.textOrange{
+    color: $color-orange;
+}
+.imgContainer{
+    overflow: hidden;
+    img{
+        height: 100%;
+        width: 100%;
+    }
 }

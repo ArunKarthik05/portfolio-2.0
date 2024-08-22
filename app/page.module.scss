@@ -1,23 +1,26 @@
 @import "../styles/app.scss";
 
-
 .main{
     position: relative;
-    .nameDiv{
+    .nameDiv {
+        font-size: 18px;
         position: fixed;
-        top: 0;
+        top: 1%;
         left: 45%;
         border-radius: 2rem;
-        background-color: black;
-        color: white;
         padding: 1rem 2rem;
         text-align: center;
-        border: 1px solid rgb(206, 201, 201);
+        color: white;
         z-index: 99;
-    }
+        background: rgba(255, 255, 255, 0.1); 
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        backdrop-filter: blur(10px);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+      }      
     section{
         min-height: 90vh;
-        margin-left: 10%;
+        // margin-left: 10%;
         margin-bottom: 10vh;
     }
+    cursor: default;
 }
