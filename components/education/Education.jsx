@@ -15,7 +15,7 @@ const Education = () => {
       <div className={styles.contentContainer}>
         <div className={styles.timeline}></div>
         {educations.map((el, i) => (
-          <>
+          <div key={i}>
           <div className={styles.circle}></div>
           <div
             key={i}
@@ -25,7 +25,7 @@ const Education = () => {
             <h3 className={styles.course}>{el.course}</h3>
             <h4 className={styles.school}>{el.school}</h4>
           </div>
-          </>
+          </div>
         ))}
       </div>
     </div>

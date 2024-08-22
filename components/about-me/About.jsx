@@ -58,7 +58,7 @@ const About = () => {
                 <h1 className={styles.stack}>FULL STACK DEV</h1>
                 <p className={styles.quote}>
                 <b className={`${styles.textOrange} ${styles.quoteOpening}`}>“</b>
-                <span className={styles.quoteText}>I don't create websites,</span>
+                <span className={styles.quoteText}>I don&apos;t create websites,</span>
                 <br/>
                 <span className={styles.quoteText}>I narrate <b>stories.</b></span>
                 </p>
