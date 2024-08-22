@@ -11,11 +11,11 @@ const About = () => {
   const animateRef = useRef(null);
   // useLeftReveal(animateRef); 
 
-  useEffect(()=>{
-    if(isKnowMoreEnabled){
-      useTextColorChange(animateRef,"top 50%","bottom 60%"); 
-    }
-  },[isKnowMoreEnabled])
+  // useEffect(()=>{
+  //   if(isKnowMoreEnabled){
+  //     useTextColorChange(animateRef,"top 50%","bottom 60%"); 
+  //   }
+  // },[isKnowMoreEnabled])
 
   return (
     <div className={styles.main}>
