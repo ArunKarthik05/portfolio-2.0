@@ -3,20 +3,21 @@
 
 .main {
     position: relative;
-    height: fit-content;
-    width: 100%;
+    min-height: 100vh;
     background-color:$color-gray-dark;
-    padding-bottom: 10vh;
-    // overflow-x:scroll;   
     .text{
-        // border:1px solid blue;
-        padding: 4rem 0 0 10%;
+        font-family: 'Manrope-Xbold';
+        font-size: 62px;
+        letter-spacing: 5px;
+        text-align: right;
+        // border:1px solid red;
+        padding:8rem 10rem 0 0;
         .iam{
             padding-left: 1rem;
             font-size: 80px;
         }
         .name{
-            font-size: 100px;
+            // font-size: 100px;
             color: $color-orange;
             background: linear-gradient(90deg, rgba(203, 167, 126, 0.918) 2%, rgba(202,180,114,1) 14%, rgba(227,162,14,1) 48%, rgba(235, 90, 57, 1) 92%);
             -webkit-background-clip: text;
@@ -33,40 +34,58 @@
             -webkit-text-fill-color: transparent;
             width: fit-content;
         }
-    }
-    .quote{
-        margin-top: 10%;
-        font-size: 60px;
-        position: relative;
-        width: fit-content;
-        .quoteText{
-            padding-left: 3rem;
-            background: -webkit-linear-gradient(0deg, rgba(223, 217, 157, 0.918) 2%, rgb(197, 175, 111) 14%, rgb(169, 136, 46) 48%, rgba(200,106,2,1) 92%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        .quoteOpening{
-            position: absolute;
-            top: -10%;
-            font-size: 100px;
-            height: fit-content;
+        .quote{
+            font-size:45px;
+            position: relative;
+            padding-top: 2rem;
+            .quoteText{
+                padding-left: 3rem;
+                background: -webkit-linear-gradient(0deg, rgba(223, 217, 157, 0.918) 2%, rgb(197, 175, 111) 14%, rgb(169, 136, 46) 48%, rgba(200,106,2,1) 92%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+            .quoteOpening{
+                position: absolute;
+                top: -8%;
+                right: 49%;
+                font-size: 100px;
+                height: fit-content;
+            }
         }
     }
     .btnContainer{
+        cursor: pointer;
+        padding: 2rem;
         position: absolute;
-        right: 10%;
-        bottom: 5%;
+        left: 8%;  
+        bottom: 0;
     }
     .spline{
         // border: 1px solid white;
         position: absolute;
-        bottom: 11%;
-        right: 0%;
+        // bottom: 1%;
+        left: 0%;
     }
     .knowMore{
         position: relative;
-        padding: 4rem 0 0 4rem;
-        height: 90%;
+        padding: 8rem 0 0 4rem;
+        // border: 1px solid blue;
+        height: 80vh;
+        .btnContainer2{
+            font-family:"Poppins-Regular";
+            cursor: pointer;
+            font-size: 22px;
+            @extend .glassyDiv !optional;
+            position: absolute;
+            bottom: 0%;
+            left: 45%;
+            border-radius: 50%;
+            padding: 1rem 1.5rem;
+            color: white;
+            border: 1px solid rgba(187, 186, 186, 0.358);
+            backdrop-filter: blur(20px);
+            box-shadow: 0 4px 12px rgba(205, 103, 7, 0.512);
+        }
         .knowMoreText{
             position: relative;
             font-size: 32px;  
@@ -77,17 +96,26 @@
             h1{
                 border-bottom: .5px solid #eb5a3997;
                 width: fit-content;
-                margin-bottom: 2rem;
+                margin-bottom: 4rem;
                 svg{
                     opacity: .8 ;
                     padding-right: 2rem;
                 }
             }
-            h2{
-                background: -webkit-linear-gradient(0deg, rgba(223, 217, 157, 0.918) 2%, rgb(197, 175, 111) 14%, rgb(169, 136, 46) 48%, rgba(200,106,2,1) 92%);
-                background-clip: text;
-                -webkit-background-clip: text;
-                -webkit-text-fill-color: transparent;
+            .textDiv{
+                font-size: 28px;
+                margin-top: 5rem;
+                // border:   1px solid red;
+                // width: fit-content;
+                letter-spacing: 2px;
+                padding-left: 4rem;
+                .quoteOpening2{
+                    position: absolute;
+                    color: $color-orange;
+                    font-size: 100px;
+                    left: 6%;
+                    bottom: 15%;
+                }
             }
         }
         .imgContainer{
@@ -96,8 +124,9 @@
             right: 10%;
             height: 400px;
             width: 350px;
-            opacity: 0.5;
-            clip-path: polygon(20% 0%, 80% 0%, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0% 80%, 0% 20%);
+            // opacity: 0.5;
+            border-radius: 10%;
+            @extend .glassyDiv !optional;
         }
         .quote{
             margin-top: 2%;

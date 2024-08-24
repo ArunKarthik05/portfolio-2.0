@@ -3,7 +3,7 @@
 import { useState, useRef, useEffect } from 'react';
 import styles from "./AudioPlayer.module.scss"
 
-const AudioPlayer = ({ src, loop = true, autoplay = true }) => {
+const AudioPlayer = ({ src, loop = true, autoplay = false }) => {
   const audioRef = useRef(null);
   const [isPlaying, setIsPlaying] = useState(false);
 

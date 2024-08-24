@@ -6,6 +6,7 @@ import Education from "@/components/education/Education";
 import About from "@/components/about-me/About";
 import AudioPlayer from "@/components/audio-player/AudioPlayer";
 import TechStack from "@/components/tech/Tech";
+import Projects from "@/components/projects/Projects";
 
 export default function Home() {
   return (
@@ -27,6 +28,9 @@ export default function Home() {
       </section>
       <section>
         <TechStack/>
+      </section>
+      <section>
+        <Projects/>
       </section>
 
 

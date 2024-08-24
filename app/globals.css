@@ -1,22 +1,4 @@
 @font-face {
-  font-family: 'Karla Bold';
-  src: url('../styles/fonts/Karla/Karla-Bold.ttf') format('woff2');
-  font-weight: bold;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'Karla LightItalic';
-  src: url('../styles/fonts/Karla/Karla-LightItalic.ttf') format('woff2');
-  font-weight: bold;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'Karla XBoldItalic';
-  src: url('../styles/fonts/Karla/Karla-ExtraBoldItalic.ttf') format('woff2');
-  font-weight: bold;
-  font-style: normal;
-}
-@font-face {
   font-family: 'Avant Garde';
   src: url('../styles/fonts/AvantGarde/AVGARDD_2.TTF') format('woff2');
   font-weight: bold;
@@ -25,6 +7,24 @@
 @font-face {
   font-family: 'Avant Garde-2';
   src: url('../styles/fonts/AvantGarde/AVGARDDO_2.TTF') format('woff2');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Poppins-Regular';
+  src: url('../styles/fonts/Poppins/Poppins-Regular.ttf') format('woff2');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Poppins-Bold';
+  src: url('../styles/fonts/Poppins/Poppins-Bold.ttf') format('woff2');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Manrope-Xbold';
+  src: url('../styles/fonts/Manrope/Manrope-ExtraBold.ttf') format('woff2');
   font-weight: bold;
   font-style: normal;
 }

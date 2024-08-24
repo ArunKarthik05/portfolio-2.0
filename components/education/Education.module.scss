@@ -5,6 +5,7 @@
 .main{
     height: 100%;
     margin-left: 10%;
+    padding-top: 10%;
     // border: 1px solid red;
     .timeline{
         background-color: $color-orange;
@@ -16,6 +17,29 @@
     }
     .contentContainer{
         position: relative;
+        // border:1px solid red;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        .flexRight{
+            // border:1px solid yellow;
+            padding: 5rem;
+            min-height: 80vh;
+            @extend .flexCol !optional;
+            justify-content: center;
+            .imgContainer{
+                height: 400px;
+                width: 350px;
+                border-radius: 10%;
+                @extend .glassyDiv !optional;
+                @extend .imgContainer !optional;
+                background-repeat: no-repeat;
+                background-size:contain;
+                background-position: center;
+                // border:1px solid blue;
+            }
+        }
         // .circle{
         //     position: absolute;
         //     left: -.5%;

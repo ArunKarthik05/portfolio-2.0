@@ -13,6 +13,10 @@
     height: 90vh;
     @extend .flexCol !optional;
     justify-content: space-between;
+    color: white;
+    background: rgba(255, 255, 255, 0.1); 
+    border: 1px solid rgba(255, 255, 255, 0.401);
+    backdrop-filter: blur(20px);
     z-index: 99;
     .image{
         position: absolute;

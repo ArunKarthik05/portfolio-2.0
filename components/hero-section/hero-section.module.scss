@@ -4,13 +4,14 @@
 
 .main{
     // border: 1px solid red;
-    margin-top: 5%;
-    min-height: 80vh;
-
+    margin-top: 10%;
+    height: 100%;
     .heroText{
         text-align: left;
+        letter-spacing: 14px;
         color: $color-gray;
         font-size: $font-size-large;
+        // font-size: 52px;
         .wordDiv{
             position: relative;
             width: 100%;
