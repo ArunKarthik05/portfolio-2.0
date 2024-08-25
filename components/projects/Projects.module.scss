@@ -1,6 +1,107 @@
 @import "../../styles/variables.scss";
 @import "../../styles/app.scss";
+@import "../../styles/flex.scss";
 
-.main{
-    height: 100%;
+.main {
+  height: 100%;
+  .contentContainer {
+    margin-left: 10rem;
+    height: 100vh;
+    width: fit-content;
+    position: relative;
+
+    .backgroundVideo {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+      border-radius: inherit;
+      opacity: 0.3;
+    }
+
+    .scrollContainer {
+      @extend .flexRow !optional;
+      padding-right: 10vh;
+      width: fit-content;
+      overflow: hidden;
+      gap: 10vw;  
+      padding: 10vh 0 5vh 5vh;
+      perspective: 1200px;
+      scroll-snap-type: x mandatory;
+
+      .projectDiv {
+        @extend .glassyDiv !optional;
+        position: relative;
+        height: 600px;
+        width: 500px;
+        border-radius: 10%;
+        text-align: center;
+        overflow: hidden;
+        scroll-snap-align: center;
+        transition: transform 0.8s ease, opacity 0.8s ease;
+        opacity: 0.6;
+        transform-style: preserve-3d;
+
+        .projectName {
+
+          cursor: pointer;
+          color: $color-orange;
+          padding: 1rem 0;
+          font-size: 32px;
+          z-index: 10;
+          transition: all 0.5s ease-in-out;
+        }
+
+        .projectImage {
+          width: 100%;
+          height: 90% !important;
+          object-fit: cover;
+          object-position: center;
+          border-radius: inherit;
+          opacity: 0.5;
+          z-index: 1;
+        }
+
+
+        &:hover {
+          opacity: 1;
+
+          .projectName {
+            background-color: black;
+            color: $color-gray;
+          }
+        }
+      }
+
+        .active{
+            border: 1px solid white;
+        }
+        .left{
+        transform: rotateY(-15deg) translateZ(-100px);
+        }
+
+        .right {
+        transform: rotateY(15deg) translateZ(-100px);
+        }
+    }
+    }
+    button{
+        cursor: pointer;
+        @extend .glassyDiv !optional;
+        padding: .5rem 1rem;
+        border-radius: 50%;
+        box-shadow: 0 4px 8px rgba(139, 138, 138, 0.512);
+    }
+}
+.prevButton{
+    position: sticky;
+    left: 10%;
+}
+.nextButton{
+    position: sticky;
+    left: 90%;
+    background-color: red;
 }
