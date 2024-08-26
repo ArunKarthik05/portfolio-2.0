@@ -11,8 +11,6 @@ const LeftMenu = () => {
   return (
     <div 
     className={styles.main} 
-    // onMouseEnter={() => setIsHovered(true)} 
-    // onMouseLeave={() => setIsHovered(false)}
     >
     {!ishovered ? 
     (

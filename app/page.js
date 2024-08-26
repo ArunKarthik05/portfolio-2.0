@@ -7,6 +7,7 @@ import About from "@/components/about-me/About";
 import AudioPlayer from "@/components/audio-player/AudioPlayer";
 import TechStack from "@/components/tech/Tech";
 import Projects from "@/components/projects/Projects";
+import Contact from "@/components/contact/Contact";
 
 export default function Home() {
   return (
@@ -32,6 +33,7 @@ export default function Home() {
       <section>
         <Projects/>
       </section>
+        <Contact/>
 
 
       <AudioPlayer src="/music/bgmusic.mp3"/>

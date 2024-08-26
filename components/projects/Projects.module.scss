@@ -7,19 +7,21 @@
   min-height: fit-content;
   margin-top: 20vh;
   padding-bottom: 10vh;
-  video{
+
+  video {
     object-fit: cover;
-      width: 100%;
-      height: 100%;
-      border-radius: inherit;
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
   }
+
   .contentContainer {
     margin-left: 10rem;
     height: fit-content;
     width: fit-content;
     position: relative;
 
-    .videoContainer{
+    .videoContainer {
       padding-top: 5vh;
       height: 80vh;
       width: 80vw;
@@ -27,105 +29,113 @@
     }
 
 
-      .scrollContainer {
-        // @extend .flexRow !optional;
-        display: flex;
-        flex-direction: row;
-        // width: 100vw;
-        padding-right: 10vh;
-        width: fit-content;
-        overflow-x: scroll;
-        gap: 5vw;  
-        padding: 10vh 0 5vh 5vh;
-        perspective: 1200px;
-        scroll-snap-type: x mandatory;
-        scrollbar-width: none; 
-        -ms-overflow-style: none; 
+    .scrollContainer {
+      // @extend .flexRow !optional;
+      display: flex;
+      flex-direction: row;
+      // width: 100vw;
+      padding-right: 10vh;
+      width: fit-content;
+      overflow-x: scroll;
+      gap: 5vw;
+      padding: 10vh 0 5vh 5vh;
+      perspective: 1200px;
+      scroll-snap-type: x mandatory;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
 
-        .projectDiv {
-          @extend .glassyDiv !optional;
-          position: relative;
-          height: 600px;
-          width: 500px;
-          border-radius: 10%;
-          text-align: center;
-          overflow: hidden;
-          scroll-snap-align: center;
-          transition: transform 0.8s ease, opacity 0.8s ease;
-          opacity: 0.6;
-          transform-style: preserve-3d;
+      .projectDiv {
+        @extend .glassyDiv !optional;
+        position: relative;
+        height: fit-content;
+        width: 500px;
+        border-radius: 10%;
+        text-align: center;
+        overflow: hidden;
+        scroll-snap-align: center;
+        transition: transform 0.8s ease, opacity 0.8s ease;
+        opacity: 0.6;
+        transform-style: preserve-3d;
 
-          video{
-            position: absolute;
-            top: 0;
-            display: none;
-            height: 90% !important;
-            z-index: 1;
-          }
-          .visible{
-            display: block;
-          }
-
-          .projectName {
-            cursor: pointer;
-            color: $color-orange;
-            padding: 1rem 0;
-            font-size: 32px;
-            z-index: 10;
-            transition: all 0.5s ease-in-out;
-          }
-
-          .projectImage {
-            width: 100%;
-            height: 90% !important;
-            object-fit: cover;
-            object-position: center;
-            border-radius: inherit;
-            opacity: 0.5;
-            z-index: 1;
-          }
-
-
-          &:hover {
-            opacity: 1;
-
-            .projectName {
-              background-color: black;
-              color: $color-gray;
-            }
-          }
+        video {
+          height: 400px;
+          position: absolute;
+          top: 0;
+          display: none;
+          height: 90% !important;
+          z-index: 1;
         }
 
-          .active{
-              border: 1px solid white;
-          }
-          .left{
-          transform: rotateY(-15deg) translateZ(-100px) scale3d(0.7,.7,.5);
-          }
+        .visible {
+          display: block;
+        }
 
-          .right {
-          transform: rotateY(15deg) translateZ(-100px) scale3d(.7,.7,.5);
+        .projectName {
+          cursor: pointer;
+          color: $color-orange;
+          padding: 1rem 0;
+          font-size: 32px;
+          z-index: 10;
+          transition: all 0.5s ease-in-out;
+        }
+
+        .projectImage {
+          width: 100%;
+          height:400px !important;
+          object-fit: cover;
+          object-position: center;
+          border-radius: inherit;
+          opacity: 0.5;
+          z-index: 1;
+        }
+
+
+        &:hover {
+          opacity: 1;
+
+          .projectName {
+            background-color: black;
+            color: $color-gray;
+            padding: 1rem;
           }
+        }
       }
-      .scrollContainer::-webkit-scrollbar {
-        display: none;
+
+      .active {
+        border: 1px solid white;
+      }
+
+      .left {
+        transform: scale3d(0.7, .7, .5);
+        pointer-events: none;
+      }
+
+      .right {
+        transform: scale3d(.7, .7, .5);
+        pointer-events: none;
       }
     }
-    button{
-        cursor: pointer;
-        padding: .7rem 1rem;
-        border-radius: 50%;
-        box-shadow: 0 4px 8px rgba(139, 138, 138, 0.512);
-        border: 1px solid rgb(122, 122, 122);
+
+    .scrollContainer::-webkit-scrollbar {
+      display: none;
     }
+  }
+
+  svg {
+    cursor: pointer;
+    padding: 1rem;
+    border-radius: 50%;
+    background-color: $color-gray;
+    fill: black;
+  }
 }
-.prevButton{
-    position: sticky;
-    left: 10%;
-    background-color: $color-orange;
+
+.prevBtn {
+  position: sticky;
+  left: 10%;
 }
-.nextButton{
-    position: sticky;
-    left: 90%;
-    background-color: $color-orange;
+
+.nextBtn {
+  position: sticky;
+  left: 90%;
 }

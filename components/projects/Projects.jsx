@@ -101,14 +101,12 @@ const Projects = () => {
           })}
         </div>
         {activeIndex > 0 && (
-          <button className={styles.prevButton} onClick={handlePrevious}>
-            &#10094;
-          </button>
+         <svg className={styles.prevBtn} onClick={handlePrevious} xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#B7AA98"><path d="m321-80-71-71 329-329-329-329 71-71 400 400L321-80Z"
+         /></svg>
         )}
         {activeIndex < images.length - 1 && (
-          <button className={styles.nextButton} onClick={handleNext}>
-            &#10095;
-          </button>
+           <svg className={styles.nextBtn} onClick={handleNext} xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#B7AA98"><path d="m321-80-71-71 329-329-329-329 71-71 400 400L321-80Z"
+           /></svg>
         )}
       </div>
     </div>

@@ -13,7 +13,11 @@
         color: rgb(85, 85, 85);
         font-family: 'Avant Garde-2';
     }
+    p:hover{
+        color: $color-gray;
+    }
     .playBtn{
+        cursor: pointer;
         border: none;
         background-color: transparent;
         color:$color-gray;

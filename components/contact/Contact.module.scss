@@ -1,0 +1,54 @@
+@import "../../styles/variables.scss";
+@import "../../styles/app.scss";
+@import "../../styles/flex.scss";
+
+.main{
+    background-color: $color-gray-dark;
+    height: fit-content;
+    color:$color-gray;
+    .contentContainer{
+        // border: 1px solid red;
+        padding: 5vh 5vh 3vh 30vh;
+        width: 75%;
+        font-size: $font-size-medium;
+        letter-spacing: 2px;
+    }
+    .flexContainer{
+        // border: 1px solid yellow;
+        padding-top: 5vh;
+        @extend .flexRow !optional;
+        justify-content: space-between;
+        font-size: $font-size-small;
+
+        .item{
+            margin-bottom:2vh;
+            width: 100%;
+            cursor: pointer;
+            border-bottom: 1px solid $color-orange;
+        }
+        .mail{
+            @extend .flexRow !optional;
+            background-color: $color-gray;
+            border-radius: 5rem;
+            padding:0 1rem;
+            position: relative;
+            p{
+                font-size: 18px;
+                padding: 1rem;
+                color: black;
+                padding-right: 15vw;
+            }
+            button{
+                position: absolute;
+                right: 0;
+                width: 20%;
+                height: 100%;
+                padding: 1.2rem;
+                border-radius: 1.5rem;
+                border: none;
+                background-color: $color-orange;
+                font-weight: bold;
+            }
+        }
+    }
+}
