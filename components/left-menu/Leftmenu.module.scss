@@ -33,5 +33,9 @@
     }
     svg{
         cursor: pointer;
+        transition: all .5s ease-in-out;
+    }
+    svg:hover{
+        box-shadow: 0 0 10px $color-orange;
     }
 }
