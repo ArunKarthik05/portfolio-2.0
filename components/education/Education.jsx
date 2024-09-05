@@ -1,18 +1,25 @@
+'usen client'
 import { useRef, useEffect } from "react";
 import styles from "./Education.module.scss";
-import Image from "next/image";
 import gsap from "gsap";
+import Reveal from "@/gsap/text/Reveal";
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
 
 const Education = () => {
   const imgContainerRef = useRef(null);
   const triggerContainer = useRef(null);
+  const reveal = useRef(null);
+
+  const images = [
+    "/images/psgslide.jpeg",
+    "/images/psg.jpeg",
+    "/images/zoho.jpg"
+  ];
 
   useEffect(() => {
-    const images = [
-      "/images/psgslide.jpeg",
-      "/images/psg.jpeg",
-      "/images/zoho.png"
-    ];
+    Reveal(reveal);
     
     const timeline = gsap.timeline({
       scrollTrigger: {
@@ -52,7 +59,7 @@ const Education = () => {
 
   return (
     <div className={styles.main}>
-      <h1 className={styles.heading}>CAREER</h1>
+      <h1 className={styles.heading} ref={reveal}>CAREER</h1>
       <div className={styles.contentContainer}>
         <div className={styles.timeline}></div>
         <div className={styles.flexLeft}>

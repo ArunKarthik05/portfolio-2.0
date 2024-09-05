@@ -20,12 +20,19 @@
     height: fit-content;
     width: fit-content;
     position: relative;
+    @include respond-to(mobiles){
+      margin-left: 5rem;
+    }
 
     .videoContainer {
       padding-top: 5vh;
       height: 80vh;
       width: 80vw;
       border-radius: 5rem;
+      @include respond-to(mobiles){
+        height: 70vh;
+        width: 70vw;
+      }
     }
 
 
@@ -33,22 +40,24 @@
       // @extend .flexRow !optional;
       display: flex;
       flex-direction: row;
-      // width: 100vw;
-      padding-right: 10vh;
-      width: fit-content;
+      width: 90vw;
       overflow-x: scroll;
       gap: 5vw;
-      padding: 10vh 0 5vh 5vh;
+      padding: 10vh 0 5vh 0;
       perspective: 1200px;
       scroll-snap-type: x mandatory;
       scrollbar-width: none;
       -ms-overflow-style: none;
+      @include respond-to(mobiles){
+        width: 80vw;
+      }
 
       .projectDiv {
+        // border: 1px solid red;
         @extend .glassyDiv !optional;
         position: relative;
         height: fit-content;
-        width: 500px;
+        min-width: 400px;
         border-radius: 10%;
         text-align: center;
         overflow: hidden;
@@ -56,13 +65,16 @@
         transition: transform 0.8s ease, opacity 0.8s ease;
         opacity: 0.6;
         transform-style: preserve-3d;
+        @include respond-to(mobiles){
+          width: 200px;
+        }
 
         video {
           height: 400px;
           position: absolute;
           top: 0;
           display: none;
-          height: 90% !important;
+          // height: 90% !important;
           z-index: 1;
         }
 
@@ -80,7 +92,7 @@
         }
 
         .projectImage {
-          width: 100%;
+          width: 400px !important;
           height:400px !important;
           object-fit: cover;
           object-position: center;
@@ -133,6 +145,7 @@
 .prevBtn {
   position: sticky;
   left: 10%;
+  transform: rotate(180deg);
 }
 
 .nextBtn {

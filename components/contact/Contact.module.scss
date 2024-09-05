@@ -1,6 +1,7 @@
 @import "../../styles/variables.scss";
 @import "../../styles/app.scss";
 @import "../../styles/flex.scss";
+@import "../../styles/mixins.scss";
 
 .main{
     background-color: $color-gray-dark;
@@ -12,6 +13,10 @@
         width: 75%;
         font-size: $font-size-medium;
         letter-spacing: 2px;
+        @include respond-to(mobiles){
+            padding: 1rem;
+            width: 100%;
+        }
     }
     .flexContainer{
         // border: 1px solid yellow;
@@ -19,6 +24,12 @@
         @extend .flexRow !optional;
         justify-content: space-between;
         font-size: $font-size-small;
+        @include respond-to(mobiles){
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
 
         .item{
             margin-bottom:2vh;

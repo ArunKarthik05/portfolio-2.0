@@ -1,28 +1,22 @@
-import { useState,useEffect, useRef } from 'react';
+'use client'
+import { useState, useRef } from 'react';
 import styles from "./About.module.scss";
-import Button from '../button/Button';
 import Spline from '@splinetool/react-spline';
-// import { applyScrollTriggerAnimation } from '../gsap/text/ChangeColor';
-import useTextColorChange from '@/gsap/text/ChangeColor';
 import Image from 'next/image';
+import useIsMobile from '@/Hooks/IsMobile';
+
 
 const About = () => {
+  const isMobile = useIsMobile();
   const [ isKnowMoreEnabled,setIsKnowMoreEnabled ] = useState(false);
   const animateRef = useRef(null);
-  // useLeftReveal(animateRef); 
-
-  // useEffect(()=>{
-  //   if(isKnowMoreEnabled){
-  //     useTextColorChange(animateRef,"top 50%","bottom 60%"); 
-  //   }
-  // },[isKnowMoreEnabled])
 
   return (
     <div className={styles.main}>
       {isKnowMoreEnabled ? (
       <div className={styles.knowMore}>
         <div className={styles.btnContainer2} onClick={()=>setIsKnowMoreEnabled(false)}>
-          <p>X</p>
+          <button className={styles.closeBtn}>X</button>
         </div>
           <div className={styles.knowMoreText}>
             <h1>
@@ -34,7 +28,7 @@ const About = () => {
             <div className={styles.textDiv}>
               <p className={styles.quoteOpening2}>“</p>
               <h2>Loves System Design,</h2>
-              <h2>Modern <span className={styles.textOrange}>3D Webflow</span></h2>
+              <h2>Modern <span className={styles.textOrange}>3D Webflow,</span></h2>
               <h2><span className={styles.textOrange}>MERN</span> Stack.</h2>
               </div>
           </div>
@@ -44,9 +38,15 @@ const About = () => {
       </div>
       ):(
         <>
-          <div className={styles.spline}>
-              <Spline scene="https://prod.spline.design/mLqtHGWLTu3ETivA/scene.splinecode" />
+        {isMobile ? (
+          <div className={styles.videoContainer}>
+            <video src="/videos/hi.mp4" alt="HI-video" controls loading="lazy" />
           </div>
+          ):(
+          <div className={styles.spline}>
+            <Spline scene="https://prod.spline.design/mLqtHGWLTu3ETivA/scene.splinecode" />
+          </div>
+          )}
           <div className={styles.text}>
                 <h1>
                   I <span className={styles.quoteOpening}>&rsquo;</span>m 
@@ -62,19 +62,11 @@ const About = () => {
                 </p>
           </div>
           <div className={styles.btnContainer} onClick={()=>setIsKnowMoreEnabled(true)}>
-                <Button 
-                text="Know More" 
-                size="22px" 
-                gradient="linear-gradient(45deg, rgba(152,107,182,0.9878545168067226) 2%, rgba(154,94,205,1) 13%, rgba(134,66,200,1) 41%, rgba(199,67,182,1) 66%, rgba(245,51,89,1) 92%)" 
-                textColor="white" 
-                brr="5rem"
-                />
+            <button className={styles.glowBtn}>Know More</button>
           </div>
         </>
       )
       }
-
-
     </div>
   );
 };

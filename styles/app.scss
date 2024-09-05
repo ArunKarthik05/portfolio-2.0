@@ -1,7 +1,11 @@
 @import "./variables.scss";
+@import "./mixins.scss";
 
 .heading{
     font-size: 100px;
+    @include respond-to(mobiles){
+        font-size: 60px;
+    }
 }
 .container{
     border-radius: 1rem;

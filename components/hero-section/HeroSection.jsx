@@ -1,4 +1,3 @@
-import {useRef} from 'react';
 import styles from "./hero-section.module.scss"
 import Spline from '@splinetool/react-spline';
 

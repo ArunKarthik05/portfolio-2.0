@@ -1,11 +1,26 @@
 @import "../../styles/variables.scss";
 @import "../../styles/app.scss";
+@import "../../styles/mixins.scss";
 
 .main {
     position: relative;
     padding: 5vh 0;
     min-height: 100vh;
     background-color:$color-gray-dark;
+    @include respond-to(mobiles){
+        border:1px solid red;
+    }
+    .videoContainer{
+        height: 30vh;
+        width: 30vw;
+        border-radius: 1rem;
+    
+        video{
+            height: 100%;
+            width: 100%;
+            border-radius: inherit;
+        }
+    }
     .text{
         font-family: 'Manrope-Xbold';
         font-size: 62px;
@@ -63,7 +78,7 @@
         padding: 2rem;
         position: absolute;
         left: 8%;  
-        bottom: 0;
+        bottom: 0%;
     }
     .spline{
         // border: 1px solid white;
@@ -80,16 +95,9 @@
             font-family:"Poppins-Regular";
             cursor: pointer;
             font-size: 22px;
-            @extend .glassyDiv !optional;
             position: absolute;
             bottom: 0%;
             left: 45%;
-            border-radius: 50%;
-            padding: 1rem 1.5rem;
-            color: white;
-            border: 1px solid rgba(187, 186, 186, 0.358);
-            backdrop-filter: blur(20px);
-            box-shadow: 0 4px 12px rgba(205, 103, 7, 0.512);
         }
         .knowMoreText{
             position: relative;
@@ -136,6 +144,25 @@
         .quote{
             margin-top: 2%;
         }
+    }
+    .glowBtn{
+        cursor: pointer;
+        font-size: 22px;
+        background: rgb(235,89,57);
+        background: linear-gradient(90deg, rgba(235,89,57,1) 0%, rgba(255,194,0,1) 100%);  
+        color: white;
+        border-radius: 5rem;
+        padding: 1rem 3rem;
+        border: none;     
+        transform: all 0.3s ease-in-out; 
+        &:hover{
+            box-shadow: 0 0 5px rgba(235,89,57,1), 0 0 20px rgba(255,194,0,1);
+        }
+    }
+    .closeBtn{
+        @extend .glowBtn;
+        padding: 1rem 1.5rem!important;
+        border-radius: 50%;
     }
   }
   

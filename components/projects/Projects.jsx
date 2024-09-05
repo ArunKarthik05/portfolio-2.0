@@ -1,16 +1,23 @@
-import React, { useRef, useState } from 'react';
+import React, { useRef, useState ,useEffect} from 'react';
 import styles from './Projects.module.scss';
 import Image from 'next/image';
+import Reveal from "@/gsap/text/Reveal";
 
 const Projects = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const [hoveredIndex, setHoveredIndex] = useState(null); // Track which project is being hovered
   const scrollContainerRef = useRef(null);
-  const bgVideo = useRef(null)
+  const bgVideo = useRef(null);
+
+  const reveal = useRef(null);
+
+  useEffect(()=>{
+    Reveal(reveal);
+  },[])
   
   const images = [
-    { src: '/images/projects/iphone-clone.jpeg', name: 'IPhone-15 Clone', link: 'https://iphone-15-clone-ak.netlify.app', video: '/videos/test.mp4' },
-    { src: '/images/projects/upliftedu.png', name: 'UpliftEdu', link: 'https://upliftedu.netlify.app', video: '/videos/test.mp4' },
+    { src: '/images/projects/iphone-clone.jpeg', name: 'IPhone-15 Clone', link: 'https://iphone-15-clone-ak.netlify.app', video: '/videos/iphone.mp4' },
+    { src: '/images/projects/upliftedu.png', name: 'UpliftEdu', link: 'https://upliftedu.netlify.app', video: '/videos/uplift.mp4' },
     { src: '/images/psg.jpeg', name: 'Project 3', link: 'https://google.com', video: '/videos/test.mp4' },
     { src: '/images/psgslide.jpeg', name: 'Project 4', link: 'https://google.com', video: '/videos/test.mp4' },
   ];
@@ -21,26 +28,26 @@ const Projects = () => {
 
   const handleNext = () => {
     setActiveIndex((prevIndex) => (prevIndex + 1) % images.length);
-    if (scrollContainerRef.current && activeIndex > 0) {
-      if (activeIndex === 2) {
-        window.scrollTo({ left: 1200, behavior: 'smooth' });
-        return;
-      }
-      window.scrollTo({ left: 800, behavior: 'smooth' });
+  
+    if (scrollContainerRef.current) {
+      const scrollAmount = scrollContainerRef.current.offsetWidth;
+      console.log(scrollAmount)
+      scrollContainerRef.current.scrollBy({ left: 400, behavior: 'smooth' });
     }
   };
-
+  
   const handlePrevious = () => {
     setActiveIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
-    if (scrollContainerRef.current && activeIndex <= 2) {
-      window.scrollTo({ left: -800, behavior: 'smooth' });
+  
+    if (scrollContainerRef.current) {
+      const scrollAmount = scrollContainerRef.current.offsetWidth;
+      scrollContainerRef.current.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
     }
-  };
+  };  
 
   const handleMouseEnter = (index) => {
     console.log(index);
     setHoveredIndex(index);
-    console.log("hoveredIndex:"+hoveredIndex);
   };
 
   const handleMouseLeave = () => {
@@ -50,10 +57,10 @@ const Projects = () => {
   return (
     <div className={styles.main}>
       <div className={styles.contentContainer}>
-        <h1 className={styles.heading}>MY PROJECTS</h1>
+        <h1 className={styles.heading} ref={reveal}>MY PROJECTS</h1>
         <div className={styles.videoContainer}>
           <video autoPlay muted loop className={styles.backgroundVideo}>
-            <source src="/videos/test.mp4" type="video/mp4" />
+            <source src="/videos/iphone.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
         </div>

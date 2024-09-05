@@ -1,13 +1,20 @@
-import React from 'react';
+import React, { useEffect ,useRef} from 'react';
 import styles from "./Tech.module.scss";
 import { OrbitControls, Environment } from '@react-three/drei'; // Import useHelper
 import { Canvas } from '@react-three/fiber';
 import { TechStackModel } from '../3d/models/Tech';
+import Reveal from "@/gsap/text/Reveal";
 
 const TechStack = () => {
+  const reveal = useRef(null);
+
+  useEffect(()=>{
+    Reveal(reveal);
+  },[])
+
   return (
     <div className={styles.main}>
-        <h1 className={styles.heading}>EXLPORE MY TECH STACK</h1>
+        <h1 className={styles.heading} ref={reveal}>EXLPORE MY TECH STACK</h1>
        <div className={styles.model}>
         <Canvas
           camera={{ position: [0, 2, 8], fov: 75 }} // Initial camera position and FOV
