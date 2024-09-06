@@ -14,7 +14,7 @@ const LeftMenu = () => {
     >
     {!ishovered ? 
     (
-      <Image src="/images/eyes.png" alt='left-menu-eyes' height={70} width={70} className={styles.image}/>
+      <Image src="/images/eyes.png" alt='left-menu-eyes' height={70} width={70} className={styles.image} priority/>
     ):(
       <>
         <div className={styles.top}>

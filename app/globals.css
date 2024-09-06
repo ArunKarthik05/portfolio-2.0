@@ -17,12 +17,6 @@
   font-style: normal;
 }
 @font-face {
-  font-family: 'Poppins-Bold';
-  src: url('../styles/fonts/Poppins/Poppins-Bold.ttf') format('woff2');
-  font-weight: bold;
-  font-style: normal;
-}
-@font-face {
   font-family: 'Manrope-Xbold';
   src: url('../styles/fonts/Manrope/Manrope-ExtraBold.ttf') format('woff2');
   font-weight: bold;
@@ -39,6 +33,6 @@ html{
   }
 }
 
-body{
+html,body{
   overflow: hidden;
 }

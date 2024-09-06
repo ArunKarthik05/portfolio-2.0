@@ -2,8 +2,8 @@ import "./globals.css";
 import LenisScroll from "@/lenis/SmoothScroll";
 
 export const metadata = {
-  title: "Arun Karthik - Web Developer",
-  description: "Get to know my story from my creative 3d web design",
+  title: "Arun Karthik-Full Stack Developer",
+  description: "Awwwards-3D Portfolios by Arun Karthik",
 };
 
 export default function RootLayout({ children }) {

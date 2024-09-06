@@ -1,5 +1,24 @@
 @import "../styles/app.scss";
+@import "../styles/flex.scss";
 
+.loaderDiv{
+    height: 100vh;
+    overflow: hidden;
+    z-index: 999;
+}
+.mobilewarning{
+    @extend .flexCol !optional;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+.show {
+    visibility: visible; 
+}
+  
+.hide {
+    visibility: hidden; 
+}
 .main{
     position: relative;
     .nameDiv {

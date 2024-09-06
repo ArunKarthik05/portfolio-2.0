@@ -29,10 +29,11 @@ const Projects = () => {
   const handleNext = () => {
     setActiveIndex((prevIndex) => (prevIndex + 1) % images.length);
   
-    if (scrollContainerRef.current) {
+    if (activeIndex>1) {
+      console.log("sc")
       const scrollAmount = scrollContainerRef.current.offsetWidth;
       console.log(scrollAmount)
-      scrollContainerRef.current.scrollBy({ left: 400, behavior: 'smooth' });
+      scrollContainerRef.current.scrollBy({ left: 100, behavior: 'smooth' });
     }
   };
   
@@ -41,7 +42,7 @@ const Projects = () => {
   
     if (scrollContainerRef.current) {
       const scrollAmount = scrollContainerRef.current.offsetWidth;
-      scrollContainerRef.current.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+      scrollContainerRef.current.scrollBy({ left: -100, behavior: 'smooth' });
     }
   };  
 

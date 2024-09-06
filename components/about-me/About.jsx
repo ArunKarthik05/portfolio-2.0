@@ -33,7 +33,7 @@ const About = () => {
               </div>
           </div>
           <div className={styles.imgContainer}>
-            <Image src="/images/arun.jpeg" alt="arun-image" height="300" width="300"/>
+            <Image src="/images/arun.jpeg" alt="arun-image" height="300" width="300" priority/>
           </div>
       </div>
       ):(

@@ -1,7 +1,6 @@
-import styles from "./hero-section.module.scss"
-import Spline from '@splinetool/react-spline';
+import styles from "./hero-section.module.scss";
 
-export const HeroSection = () => {
+export const HeroSection = ({children,loading}) => {
   const words = ['TURNING','DREAMS','INTO','3D','REALITY'];
 
   return (
@@ -17,8 +16,8 @@ export const HeroSection = () => {
         ))}
       </div>
       <div>
-        <div className={styles.model}>
-          <Spline className={styles.spline} scene="https://prod.spline.design/JonUyXTjggwpvoCx/scene.splinecode" />
+        <div className={`${loading ? styles.hide : styles.model}`}>
+          {children}
         </div>
       </div>
     </div>
