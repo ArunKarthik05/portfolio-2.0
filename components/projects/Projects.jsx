@@ -18,7 +18,7 @@ const Projects = () => {
   const images = [
     { src: '/images/projects/iphone-clone.jpeg', name: 'IPhone-15 Clone', link: 'https://iphone-15-clone-ak.netlify.app', video: '/videos/iphone.mp4' },
     { src: '/images/projects/upliftedu.png', name: 'UpliftEdu', link: 'https://upliftedu.netlify.app', video: '/videos/uplift.mp4' },
-    { src: '/images/psg.jpeg', name: 'Project 3', link: 'https://google.com', video: '/videos/test.mp4' },
+    { src: '/images/projects/prompts.png', name: 'promptomania', link: 'https://promptomania-blond.vercel.app/', video: '/videos/test.mp4' },
     { src: '/images/psgslide.jpeg', name: 'Project 4', link: 'https://google.com', video: '/videos/test.mp4' },
   ];
 
