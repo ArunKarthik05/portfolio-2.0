@@ -16,10 +16,10 @@ const Projects = () => {
   },[])
   
   const images = [
-    { src: '/images/projects/iphone-clone.jpeg', name: 'IPhone-15 Clone', link: 'https://iphone-15-clone-ak.netlify.app', video: '/videos/iphone.mp4' },
+    { src: '/images/projects/prompts.png', name: 'promptomania', link: 'https://promptomania-blond.vercel.app', video: '/videos/prompt.mp4' },
     { src: '/images/projects/upliftedu.png', name: 'UpliftEdu', link: 'https://upliftedu.netlify.app', video: '/videos/uplift.mp4' },
-    { src: '/images/projects/prompts.png', name: 'promptomania', link: 'https://promptomania-blond.vercel.app/', video: '/videos/test.mp4' },
-    { src: '/images/psgslide.jpeg', name: 'Project 4', link: 'https://google.com', video: '/videos/test.mp4' },
+    { src: '/images/projects/image-search.png', name: 'Image Search', link: 'https://imagesearchbyak.netlify.app', video: '/videos/imagesearch.mp4' },
+    { src: '/images/projects/iphone-clone.jpeg', name: 'IPhone-15 Clone', link: 'https://iphone-15-clone-ak.netlify.app', video: '/videos/iphone.mp4' },
   ];
 
   const handleRedirect = (link) => {
@@ -33,7 +33,7 @@ const Projects = () => {
       console.log("sc")
       const scrollAmount = scrollContainerRef.current.offsetWidth;
       console.log(scrollAmount)
-      scrollContainerRef.current.scrollBy({ left: 100, behavior: 'smooth' });
+      scrollContainerRef.current.scrollBy({ left: 500, behavior: 'smooth' });
     }
   };
   
@@ -61,7 +61,7 @@ const Projects = () => {
         <h1 className={styles.heading} ref={reveal}>MY PROJECTS</h1>
         <div className={styles.videoContainer}>
           <video autoPlay muted loop className={styles.backgroundVideo}>
-            <source src="/videos/iphone.mp4" type="video/mp4" />
+            <source src="/videos/allprojects.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
         </div>
@@ -90,10 +90,10 @@ const Projects = () => {
                   priority="low"
                   className={styles.projectImage}
                 />
-                {hoveredIndex === i &&
+                {activeIndex === i &&
                   <video
                   src={project.video}
-                  className={`${styles.projectVideo} ${hoveredIndex === i ? styles.visible : ''}`}
+                  className={`${styles.projectVideo} ${activeIndex === i ? styles.visible : ''}`}
                   muted
                   loop
                   playsInline
@@ -103,6 +103,10 @@ const Projects = () => {
                 }
                 <h2 className={styles.projectName} onClick={() => handleRedirect(project.link)}>
                   {hoveredIndex === i ? 'Visit Site' : project.name}
+                  <span className={styles.redirect}>
+                  <svg xmlns="http://www.w3.org/2000/svg" height="18px" viewBox="0 -960 960 960" width="18px" fill="#EB5939"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h280v80H200v560h560v-280h80v280q0 33-23.5 56.5T760-120H200Zm188-212-56-56 372-372H560v-80h280v280h-80v-144L388-332Z"
+                  /></svg>
+                  </span>
                 </h2>
               </div>
             );

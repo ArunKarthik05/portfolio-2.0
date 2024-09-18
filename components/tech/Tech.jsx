@@ -5,12 +5,14 @@ import { Canvas } from '@react-three/fiber';
 import { TechStackModel } from '../3d/models/Tech';
 import Reveal from "@/gsap/text/Reveal";
 
-const TechStack = () => {
+const TechStack = ({loading}) => {
   const reveal = useRef(null);
 
   useEffect(()=>{
-    Reveal(reveal);
-  },[])
+    if( !loading){
+      Reveal(reveal);
+    }
+  },[loading])
 
   return (
     <div className={styles.main}>

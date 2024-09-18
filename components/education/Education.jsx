@@ -7,7 +7,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 gsap.registerPlugin(ScrollTrigger);
 
-const Education = () => {
+const Education = ({loading}) => {
   const imgContainerRef = useRef(null);
   const triggerContainer = useRef(null);
   const reveal = useRef(null);
@@ -19,37 +19,39 @@ const Education = () => {
   ];
 
   useEffect(() => {
-    Reveal(reveal);
+    if( !loading){
+      Reveal(reveal);
     
-    const timeline = gsap.timeline({
-      scrollTrigger: {
-        trigger: triggerContainer.current,
-        start: "top center",
-        end: "bottom center",
-        scrub: true,
-        // markers: true,
-      }
-    })
-    timeline.from(imgContainerRef.current,{ opacity : 0})
-    .to(imgContainerRef.current, {
-      opacity: 1,
-      backgroundImage: `url(${images[0]})`,
-      duration: 1,
-    })
-
-    timeline.from(imgContainerRef.current,{ opacity : 0})
-    .to(imgContainerRef.current, {
-      opacity: 1,
-      backgroundImage: `url(${images[1]})`,
-      duration: 1,
-    })
-    timeline.from(imgContainerRef.current,{ opacity : 0})
-    .to(imgContainerRef.current, {
-      opacity: 1,
-      backgroundImage: `url(${images[2]})`,
-      duration: 1,
-    })
-  }, []);
+      const timeline = gsap.timeline({
+        scrollTrigger: {
+          trigger: triggerContainer.current,
+          start: "top center",
+          end: "bottom center",
+          scrub: true,
+          // markers: true,
+        }
+      })
+      timeline.from(imgContainerRef.current,{ opacity : 0})
+      .to(imgContainerRef.current, {
+        opacity: 1,
+        backgroundImage: `url(${images[0]})`,
+        duration: 1,
+      })
+  
+      timeline.from(imgContainerRef.current,{ opacity : 0})
+      .to(imgContainerRef.current, {
+        opacity: 1,
+        backgroundImage: `url(${images[1]})`,
+        duration: 1,
+      })
+      timeline.from(imgContainerRef.current,{ opacity : 0})
+      .to(imgContainerRef.current, {
+        opacity: 1,
+        backgroundImage: `url(${images[2]})`,
+        duration: 1,
+      })
+    }
+  }, [loading]);
 
   const educations = [
     { name: "UNDERGRAD 2022", course: "B.sc COMPUTER SCIENCE", school: "PSG COLLEGE OF ARTS AND SCIENCE" },

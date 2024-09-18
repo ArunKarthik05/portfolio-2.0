@@ -5,7 +5,7 @@
 .main {
     position: relative;
     padding: 5vh 0;
-    min-height: 100vh;
+    min-height: 110vh;
     background-color:$color-gray-dark;
     @include respond-to(mobiles){
         border:1px solid red;

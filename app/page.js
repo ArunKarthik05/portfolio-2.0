@@ -1,5 +1,5 @@
 'use client'
-import { Fragment,useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import styles from "./page.module.scss";
 import { HeroSection } from "@/components/hero-section/HeroSection";
 import LeftMenu from "@/components/left-menu/LeftMenu";
@@ -23,7 +23,7 @@ export default function Home() {
     }
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 10000); 
+    }, 5000); 
 
     return () => {
       clearTimeout(timer);
@@ -70,10 +70,10 @@ export default function Home() {
           <About />
         </section>
         <section>
-          <Education />
+          <Education loading={loading}/>
         </section>
         <section>
-          <TechStack />
+          <TechStack loading={loading}/>
         </section>
         <section>
           <Projects />
