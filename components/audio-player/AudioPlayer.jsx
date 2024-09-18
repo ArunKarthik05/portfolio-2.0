@@ -5,7 +5,7 @@ import styles from "./AudioPlayer.module.scss"
 
 const AudioPlayer = ({ src, loop = true, autoplay = true }) => {
   const audioRef = useRef(null);
-  const [isPlaying, setIsPlaying] = useState(true);
+  const [isPlaying, setIsPlaying] = useState(false);
 
   const handlePlayPause = () => {
     setIsPlaying(!isPlaying);
@@ -19,7 +19,7 @@ const AudioPlayer = ({ src, loop = true, autoplay = true }) => {
   return (
     <>
       <div className={styles.main}>
-        <audio ref={audioRef} loop={loop} autoPlay={true}>
+        <audio ref={audioRef} loop={loop} autoPlay={autoplay}>
           <source src={src} type="audio/mpeg" />
         </audio>
       <button onClick={handlePlayPause} className={styles.playBtn}>
